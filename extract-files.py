@@ -31,7 +31,8 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libexynoscamera3.so': blob_fixup()
         .add_needed('libui_shim.so')
         .sig_replace('16 00 00 94 0B 00 00 14', '1F 20 03 D5 0B 00 00 14')
-        .sig_replace('92 FF FF 97 0B 00 00 14', '1F 20 03 D5 0B 00 00 14'),
+        .sig_replace('92 FF FF 97 0B 00 00 14', '1F 20 03 D5 0B 00 00 14')
+        .sig_replace('88 02 00 36 21 0F 00 B0', '1F 20 03 D5 21 0F 00 B0'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
