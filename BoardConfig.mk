@@ -9,6 +9,12 @@ include device/samsung/s5e9925-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/samsung/r0s
 
+# Camera
+SOONG_CONFIG_NAMESPACES += samsungCameraVars
+SOONG_CONFIG_samsungCameraVars += extra_ids
+# ID=52 is telephoto
+SOONG_CONFIG_samsungCameraVars_extra_ids := 52
+
 # Display
 TARGET_SCREEN_DENSITY := 480
 
