@@ -9,6 +9,13 @@ include device/samsung/s5e9925-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/samsung/r0s
 
+# Bluetooth
+BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_QCOM := true
+BOARD_HAS_QCA_BT_ROME := true
+QCOM_BT_USE_BTNV := true
+QCOM_BT_USE_SMD_TTY := true
+
 # Camera
 SOONG_CONFIG_NAMESPACES += samsungCameraVars
 SOONG_CONFIG_samsungCameraVars += extra_ids
