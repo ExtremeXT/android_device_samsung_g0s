@@ -53,3 +53,7 @@ vendor/firmware/mfc_fw.bin
 vendor/firmware/sensorhub/shub_pamir_rainbow.bin
 vendor/firmware/vts_evt0.bin
 vendor/firmware/vts.bin
+
+# Sensors
+vendor/lib64/sensors.grip.so
+vendor/lib64/sensors.sensorhub.so
