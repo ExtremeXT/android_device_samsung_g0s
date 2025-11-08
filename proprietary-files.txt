@@ -62,6 +62,10 @@ vendor/firmware/vts.bin
 vendor/bin/hw/gpsd
 vendor/lib64/libgps.utils.so
 
+# RAMDisk
+recovery/ramdisk/lib/firmware/sgpu/vangogh_lite_unified.bin:recovery/root/lib/firmware/sgpu/vangogh_lite_unified.bin
+recovery/ramdisk/vendor/firmware/tsp_stm/fts2ba61y_r0.bin:recovery/root/vendor/firmware/tsp_stm/fts2ba61y_r0.bin
+
 # Sensors
 vendor/lib64/sensors.grip.so
 vendor/lib64/sensors.sensorhub.so

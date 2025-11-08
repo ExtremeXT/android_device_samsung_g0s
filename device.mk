@@ -12,6 +12,11 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_PACKAGES += \
     init.r0s.rc
 
+# Firmware
+PRODUCT_COPY_FILES += \
+    vendor/samsung/r0s/proprietary/recovery/root/lib/firmware/sgpu/vangogh_lite_unified.bin:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/lib/firmware/sgpu/vangogh_lite_unified.bin \
+    vendor/samsung/r0s/proprietary/recovery/root/vendor/firmware/tsp_stm/fts2ba61y_r0.bin:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/vendor/firmware/tsp_stm/fts2ba61y_r0.bin \
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
