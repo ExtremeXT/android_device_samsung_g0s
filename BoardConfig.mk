@@ -9,6 +9,9 @@ include device/samsung/s5e9925-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/samsung/r0s
 
+# Display
+TARGET_SCREEN_DENSITY := 480
+
 # OTA
 TARGET_OTA_ASSERT_DEVICE := r0s
 
