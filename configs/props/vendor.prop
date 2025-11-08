@@ -1,2 +1,7 @@
 # Display
 persist.sys.sf.hs_mode=3
+
+# Wi-Fi
+ro.vendor.wifi.sap.interface=wlan1
+vendor.wifi.dualconcurrent.interface=wlan1
+wifi.concurrent.interface=wlan1

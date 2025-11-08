@@ -21,6 +21,18 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# WiFi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi-service \
+    hostapd \
+    libcld80211 \
+    wpa_supplicant \
+    wpa_supplicant.conf
+
+PRODUCT_SOONG_NAMESPACES += \
+    hardware/qcom/wlan \
+    hardware/qcom/wlan/legacy
+
 # Inherit from Common Tree
 $(call inherit-product, device/samsung/s5e9925-common/device-common.mk)
 
