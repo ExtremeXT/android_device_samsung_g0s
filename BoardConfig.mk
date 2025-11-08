@@ -18,6 +18,12 @@ SOONG_CONFIG_samsungCameraVars_extra_ids := 52
 # Display
 TARGET_SCREEN_DENSITY := 480
 
+# Kernel
+TARGET_KERNEL_CONFIG += r0s.config
+
+# Kernel Modules
+BOARD_VENDOR_KERNEL_MODULES_LOAD += wlan.ko
+
 # OTA
 TARGET_OTA_ASSERT_DEVICE := r0s
 
