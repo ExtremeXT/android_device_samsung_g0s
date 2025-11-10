@@ -37,8 +37,7 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 PRODUCT_SOONG_NAMESPACES += \
-    hardware/qcom/wlan \
-    hardware/qcom/wlan/legacy
+    hardware/qcom-caf/wlan
 
 # Inherit from Common Tree
 $(call inherit-product, device/samsung/s5e9925-common/device-common.mk)

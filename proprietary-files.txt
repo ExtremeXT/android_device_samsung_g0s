@@ -130,14 +130,12 @@ vendor/tee/ffffffff-0000-0000-0000-000000000030
 vendor/tee/tui/resolution_common/ID00000100
 
 # Wi-Fi
-vendor/bin/hw/macloader
 vendor/bin/init.insmod.sh
 vendor/etc/init/wifi_qcom_ap_exynos.rc
 vendor/etc/init/wifi.rc
 vendor/etc/wifi/indoorchannel.info
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/wpa_supplicant_overlay.conf
-vendor/etc/wlan_common_rc
 vendor/firmware/Data.msc
 vendor/firmware/qca6490/amss20.bin
 vendor/firmware/qca6490/bdwlan.elf

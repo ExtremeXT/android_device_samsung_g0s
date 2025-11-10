@@ -1,6 +1,9 @@
 # Display
 persist.sys.sf.hs_mode=3
 
+# Fingerprint
+ro.vendor.fingerprint.sensor_location=540|1611|140
+
 # Wi-Fi
 ro.vendor.wifi.sap.interface=wlan1
 vendor.wifi.dualconcurrent.interface=wlan1
