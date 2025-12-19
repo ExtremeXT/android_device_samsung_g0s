@@ -20,6 +20,7 @@ namespace_imports = [
     'hardware/samsung',
     'hardware/samsung_slsi-linaro/codec2',
     'hardware/samsung_slsi-linaro/exynos',
+    'hardware/samsung_slsi-linaro/graphics',
     'hardware/samsung_slsi-linaro/interfaces',
     'hardware/samsung_slsi-linaro/sgpu',
     'vendor/samsung/s5e9925-common',
@@ -40,7 +41,7 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'r0s',
+    'g0s',
     'samsung',
     namespace_imports=namespace_imports,
     blob_fixups=blob_fixups,

@@ -1,8 +1,8 @@
 # Display
-persist.sys.sf.hs_mode=3
+#persist.sys.sf.hs_mode=1
 
 # Fingerprint
-ro.vendor.fingerprint.sensor_location=540|1611|140
+ro.vendor.fingerprint.sensor_location=540|1789|114
 
 # Wi-Fi
 ro.vendor.wifi.sap.interface=wlan1

@@ -7,14 +7,11 @@
 # Inherit from Common Tree
 include device/samsung/s5e9925-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/samsung/r0s
+DEVICE_PATH := device/samsung/g0s
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_QCOM := true
-#BOARD_HAS_QCA_BT_ROME := true
-#QCOM_BT_USE_BTNV := true
-#QCOM_BT_USE_SMD_TTY := true
+BOARD_HAVE_BLUETOOTH_BCM := true
 
 # Camera
 SOONG_CONFIG_NAMESPACES += samsungCameraVars
@@ -23,29 +20,34 @@ SOONG_CONFIG_samsungCameraVars += extra_ids
 SOONG_CONFIG_samsungCameraVars_extra_ids := 52
 
 # Display
-TARGET_SCREEN_DENSITY := 480
+TARGET_SCREEN_DENSITY := 450
 
 # Kernel
-TARGET_KERNEL_CONFIG += r0s.config
+TARGET_KERNEL_CONFIG += g0s.config
 
 # Kernel Modules
-BOARD_VENDOR_KERNEL_MODULES_LOAD += wlan.ko
+BOARD_VENDOR_KERNEL_MODULES_LOAD += dhd.ko
 
 # OTA
-TARGET_OTA_ASSERT_DEVICE := r0s
+TARGET_OTA_ASSERT_DEVICE := g0s
 
 # Properties
-TARGET_VENDOR_PROP += device/samsung/r0s/configs/props/vendor.prop
+TARGET_VENDOR_PROP += device/samsung/g0s/configs/props/vendor.prop
 
 # Wi-Fi
-BOARD_WLAN_DEVICE                             := qcwcn
-WIFI_HAL_INTERFACE_COMBINATIONS               := {{{STA}, 1}, {{AP}, 1}}, {{{STA}, 1}, {{P2P, NAN}, 1}}, {{{AP}, 2}}, {{{STA}, 2}}
+BOARD_WLAN_DEVICE                             := bcmdhd
 BOARD_WPA_SUPPLICANT_DRIVER                   := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB              := lib_driver_cmd_bcmdhd
 BOARD_HOSTAPD_DRIVER                          := NL80211
-BOARD_HOSTAPD_CONFIG_80211W_MFP_OPTIONAL      := true
-WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
+BOARD_HOSTAPD_PRIVATE_LIB                     := lib_driver_cmd_bcmdhd
+CONFIG_IEEE80211AX                            := true
+WIFI_AVOID_IFACE_RESET_MAC_CHANGE             := true
 WIFI_FEATURE_HOSTAPD_11AX                     := true
+WIFI_HIDL_FEATURE_AWARE                       := true
+WIFI_HIDL_FEATURE_DUAL_INTERFACE              := true
+WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION                        := VER_0_8_X
+$(call soong_config_set,wpa_supplicant_8,board_wlan_bcmdhd_sae,true)
 
 # inherit from the proprietary version
--include vendor/samsung/r0s/BoardConfigVendor.mk
+-include vendor/samsung/g0s/BoardConfigVendor.mk
