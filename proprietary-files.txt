@@ -1,6 +1,17 @@
 # All unpinned blobs are from S901BXXSIFYI3
 # Vendor security patch level 2025-09-01
 
+vendor/etc/gnss/gps.cfg
+vendor/firmware/SoundBoosterParam.bin
+vendor/etc/SoundBoosterParam.txt
+vendor/etc/LVACFS_Calibration.dat
+vendor/etc/LVACFS_ControlParams.txt
+vendor/firmware/sectiongraph_tplg.conf
+vendor/lib64/libtriplecam_image_optical_zoom.so
+vendor/lib64/libtriplecam_video_optical_zoom.so
+vendor/lib64/libtriplepreview_interface.so
+vendor/lib64/libtriplecapture_interface.so
+
 # Audio
 vendor/etc/mixer_gains.xml
 vendor/lib/soundfx/libaudiosaplus_sec.so

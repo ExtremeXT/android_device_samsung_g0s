@@ -35,7 +35,8 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     hostapd \
     wpa_supplicant \
-    wpa_supplicant.conf
+    wpa_supplicant.conf \
+    WiFiOverlayDevice
 
 # Inherit from Common Tree
 $(call inherit-product, device/samsung/s5e9925-common/device-common.mk)

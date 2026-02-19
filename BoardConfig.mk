@@ -47,7 +47,7 @@ WIFI_HIDL_FEATURE_AWARE                       := true
 WIFI_HIDL_FEATURE_DUAL_INTERFACE              := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION                        := VER_0_8_X
-$(call soong_config_set,wpa_supplicant_8,board_wlan_bcmdhd_sae,true)
+$(call soong_config_set_bool,wpa_supplicant_8,board_wlan_bcmdhd_sae,true)
 
 # inherit from the proprietary version
 -include vendor/samsung/g0s/BoardConfigVendor.mk
